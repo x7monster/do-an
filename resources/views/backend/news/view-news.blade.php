@@ -54,7 +54,7 @@
                       <td>{{$news->title}}</td>
                       <td>{{$news->description}}</td>
                       <td>{{$news->content}}</td>
-                      <td><img src="{{(!empty($news->image))?url('public/upload/news_images/'.$news->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
+                      <td><img src="{{(!empty($news->image))?url('upload/news_images/'.$news->image):url('upload/no_img.png')}}" width="120px" height="130px"></td>
                       <td>
                         <a title="Edit" class="btn btn-sm btn-primary" href="{{route('news.edit',$news->id)}}"><i class="fa fa-edit"></i></a>
                         <a title="Delete" id="delete" class="btn btn-sm btn-danger" href="{{route('news.delete',$news->id)}}"><i class="fa fa-trash"></i></a>

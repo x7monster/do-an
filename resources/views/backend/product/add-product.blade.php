@@ -105,7 +105,7 @@
                       		<input type="file" name="image" id="image" class="form-control">
                       	</div>
                         <div class="form-group col-md-3">
-                      		<img id="showImage" src="{{(!empty($editData->image))?url('public/upload/product_images/'.$editData->image):url('public/upload/no_img.png')}}" style="width: 100px; height:105px; border: 1px solid #000; ">
+                      		<img id="showImage" src="{{(!empty($editData->image))?url('upload/product_images/'.$editData->image):url('public/upload/no_img.png')}}" style="width: 100px; height:105px; border: 1px solid #000; ">
                       	</div>
                       	<div class="form-group col-md-3">
                       		<label>Hình Ảnh Liên Quan </label>

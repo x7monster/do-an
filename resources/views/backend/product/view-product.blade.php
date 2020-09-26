@@ -54,7 +54,7 @@
                       <td>{{$product['brand']['name']}}</td>
                       <td>{{$product->name}}</td>
                       <td>{{number_format($product->price)}} VND </td>
-                      <td><img src="{{(!empty($product->image))?url('public/upload/product_images/'.$product->image):url('public/upload/no_img.png')}}" style="width: 50px; height:55px;"></td>
+                      <td><img src="{{(!empty($product->image))?url('upload/product_images/'.$product->image):url('upload/no_img.png')}}" style="width: 50px; height:55px;"></td>
                       <td>
                         <a title="Edit" class="btn btn-sm btn-primary" href="{{route('products.edit',$product->id)}}"><i class="fa fa-edit"></i></a>
                         <a title="Details" class="btn btn-sm btn-success" href="{{route('products.details',$product->id)}}"><i class="fa fa-eye"></i></a>

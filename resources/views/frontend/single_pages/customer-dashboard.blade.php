@@ -12,7 +12,7 @@
 		padding-left: 15px;
 	}
 </style>
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Thông Tin Cá Nhân
 		</h2>
@@ -33,7 +33,7 @@
 							<div class="card">
 								<div class="card-body">
 									<div class="img-circle txt-center">
-										<img src="{{(!empty($user->image))?url('public/upload/user_images/'.$user->image):url('public/upload/no_img.png')}}" style="width: 130px; height: 140px; border-radius: 5px">
+										<img src="{{(!empty($user->image))?url('upload/user_images/'.$user->image):url('upload/no_img.png')}}" style="width: 130px; height: 140px; border-radius: 5px">
 									</div>
 									<h3 class="txt-center">{{$user->name}}</h3>
 									<p class="txt-center">{{$user->address}}</p>

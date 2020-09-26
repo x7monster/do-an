@@ -46,7 +46,7 @@
                     @foreach($allData as $key => $logo)
                     <tr>
                       <td>{{$key+1}}</td>
-                      <td><img src="{{(!empty($logo->image))?url('public/upload/logo_images/'.$logo->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
+                      <td><img src="{{(!empty($logo->image))?url('upload/logo_images/'.$logo->image):url('upload/no_img.png')}}" width="120px" height="130px"></td>
                       <td>
                         <a title="Edit" class="btn btn-sm btn-primary" href="{{route('logos.edit',$logo->id)}}"><i class="fa fa-edit"></i></a>
                         <a title="Delete" id="delete" class="btn btn-sm btn-danger" href="{{route('logos.delete',$logo->id)}}"><i class="fa fa-trash"></i></a>

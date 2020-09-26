@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			HOT NEWS
 		</h2>
@@ -11,7 +11,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="{{asset('public/frontend2')}}/img/fav.png">
+		<link rel="shortcut icon" href="{{asset('frontend2')}}/img/fav.png">
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
@@ -22,19 +22,19 @@
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title>Magazine</title>
-		<link href="{{asset('public/frontend2')}}/https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+		<link href="{{asset('frontend2')}}/https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--
 		CSS
 		============================================= -->
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/linearicons.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/font-awesome.min.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/bootstrap.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/magnific-popup.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/nice-select.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/animate.min.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/owl.carousel.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/jquery-ui.css">
-		<link rel="stylesheet" href="{{asset('public/frontend2')}}/css/main.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/linearicons.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/bootstrap.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/magnific-popup.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/nice-select.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/animate.min.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/owl.carousel.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/jquery-ui.css">
+		<link rel="stylesheet" href="{{asset('frontend2')}}/css/main.css">
 	</head>
 	<body>
 		
@@ -51,7 +51,7 @@
 							<div class="single-post-wrap">
 								<div class="feature-img-thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="{{asset('public/upload/news_images/'.$news->image)}}" alt="" style="height: 350px">
+									<img class="img-fluid" src="{{asset('upload/news_images/'.$news->image)}}" alt="" style="height: 350px">
 								</div>
 								<div class="content-wrap">
 									<ul class="tags mt-10">
@@ -108,14 +108,14 @@
 									@foreach($news2 as $key => $news2)
 									<div class="single-list flex-row d-flex">
 										<div class="thumb">
-											<img src="{{asset('public/upload/news_images/'.$news2->image)}}" alt="" style="height: 50px">
+											<img src="{{asset('upload/news_images/'.$news2->image)}}" alt="" style="height: 50px">
 										</div>
 										<div class="details">
 											<a href="{{route('news.details',$news2->id)}}">
 												<h6>{{$news2->title}}</h6>
 											</a>
 											<ul class="meta">
-												<li><a href="{{asset('public/frontend2')}}/#"><span class="lnr lnr-calendar-full"></span>{{$news2->created_at}}</a></li>
+												<li><a href="{{asset('frontend2')}}/#"><span class="lnr lnr-calendar-full"></span>{{$news2->created_at}}</a></li>
 											
 											</ul>
 										</div>
@@ -170,21 +170,21 @@
 		<!-- start footer Area -->
 		
 		<!-- End footer Area -->
-		<script src="{{asset('public/frontend2')}}/js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="{{asset('public/frontend2')}}/js/vendor/bootstrap.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-		<script src="{{asset('public/frontend2')}}/js/easing.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/hoverIntent.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/superfish.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/jquery.ajaxchimp.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/jquery.magnific-popup.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/mn-accordion.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/jquery-ui.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/jquery.nice-select.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/owl.carousel.min.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/mail-script.js"></script>
-		<script src="{{asset('public/frontend2')}}/js/main.js"></script>
+		<script src="{{asset('frontend2')}}/js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="{{asset('frontend2')}}/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{asset('frontend2')}}/js/vendor/bootstrap.min.js"></script>
+		<script src="{{asset('frontend2')}}/https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{{asset('frontend2')}}/js/easing.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/hoverIntent.js"></script>
+		<script src="{{asset('frontend2')}}/js/superfish.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/jquery.ajaxchimp.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/jquery.magnific-popup.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/mn-accordion.js"></script>
+		<script src="{{asset('frontend2')}}/js/jquery-ui.js"></script>
+		<script src="{{asset('frontend2')}}/js/jquery.nice-select.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/owl.carousel.min.js"></script>
+		<script src="{{asset('frontend2')}}/js/mail-script.js"></script>
+		<script src="{{asset('frontend2')}}/js/main.js"></script>
 	</body>
 </html>		
 @endsection

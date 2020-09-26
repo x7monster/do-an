@@ -45,7 +45,7 @@
               			@foreach($allData as $key => $sponsor)
               			<tr>
               				<td>{{$key+1}}</td>
-              				<td><img src="{{(!empty($sponsor->image))?url('public/upload/sponsor_images/'.$sponsor->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
+              				<td><img src="{{(!empty($sponsor->image))?url('upload/sponsor_images/'.$sponsor->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
               				<td>
               					<a title="Edit" class="btn btn-sm btn-primary" href="{{route('sponsors.edit',$sponsor->id)}}"><i class="fa fa-edit"></i></a>
               					<a title="Delete" id="delete" class="btn btn-sm btn-danger" href="{{route('sponsors.delete',$sponsor->id)}}"><i class="fa fa-trash"></i></a>

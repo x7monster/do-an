@@ -11,7 +11,7 @@
 	}
 </style>
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Giỏ Hàng
 		</h2>
@@ -43,7 +43,7 @@
 								<td>{{$content->name}}</td>
 								<td>
 									<div class="how-itemcart1">
-										<img src="{{asset('public/upload/product_images/'.$content->options->image)}}" alt="IMG" style="width:100px; height: 85px; ">
+										<img src="{{asset('upload/product_images/'.$content->options->image)}}" alt="IMG" style="width:100px; height: 85px; ">
 									</div>
 								</td>
 								<td>{{$content->options->size_name}}</td>

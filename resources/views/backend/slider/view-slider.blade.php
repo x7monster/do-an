@@ -48,7 +48,7 @@
               			@foreach($allData as $key => $slider)
               			<tr>
               				<td>{{$key+1}}</td>
-              				<td><img src="{{(!empty($slider->image))?url('public/upload/slider_images/'.$slider->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
+              				<td><img src="{{(!empty($slider->image))?url('upload/slider_images/'.$slider->image):url('public/upload/no_img.png')}}" width="120px" height="130px"></td>
               				<td>{{$slider->short_title}}</td>
               				<td>{{$slider->long_title}}</td>
               				<td>

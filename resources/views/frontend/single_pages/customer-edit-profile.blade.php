@@ -11,7 +11,7 @@
         padding-left: 15px;
     }
 </style>
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
         <h2 class="ltext-105 cl0 txt-center">
             Chỉnh Sửa Thông Tin
         </h2>
@@ -62,7 +62,7 @@
                                <input type="file" name="image" id="image" class="form-control">
                            </div>
                            <div class="col-md-2">
-                             <img id="showImage" src="{{(!empty($editData->image))?url('public/upload/user_images/'.$editData->image):url('public/upload/no_img.png')}}" style="width: 80px; height:90px; border: 1px solid #000; ">
+                             <img id="showImage" src="{{(!empty($editData->image))?url('upload/user_images/'.$editData->image):url('upload/no_img.png')}}" style="width: 80px; height:90px; border: 1px solid #000; ">
                            </div>
                            <div class="col-md-4" style="padding-top: 30px">
                                <button type="submit" class="btn btn-primary">Cập Nhật Thông Tin</button>

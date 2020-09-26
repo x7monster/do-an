@@ -61,7 +61,7 @@
             @foreach($order['order_details'] as $details)
             <tr>
               <td>
-                <img src="{{url('public/upload/product_images/'.$details['product']['image'])}}" style="width: 50px; height:55px;"> &nbsp; {{$details['product']['name']}}
+                <img src="{{url('upload/product_images/'.$details['product']['image'])}}" style="width: 50px; height:55px;"> &nbsp; {{$details['product']['name']}}
               </td>
               <td>
                 {{$details['color']['name']}} & {{$details['size']['name']}}

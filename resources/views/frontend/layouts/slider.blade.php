@@ -5,25 +5,25 @@
     <title>Daily Shop | Home</title>
     
     <!-- Font awesome -->
-    <link href="{{asset('public/frontend3')}}/css/font-awesome.css" rel="stylesheet">
+    <link href="{{asset('frontend3')}}/css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="{{asset('public/frontend3')}}/css/bootstrap.css" rel="stylesheet">   
+    <link href="{{asset('frontend3')}}/css/bootstrap.css" rel="stylesheet">   
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
-    <link href="{{asset('public/frontend3')}}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link href="{{asset('frontend3')}}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
     <!-- Product view slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/jquery.simpleLens.css">    
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/jquery.simpleLens.css">    
     <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/slick.css">
     <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/nouislider.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/nouislider.css">
     <!-- Theme color -->
-    <link id="switcher" href="{{asset('public/frontend3')}}/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="{{asset('frontend3')}}/css/theme-color/default-theme.css" rel="stylesheet">
     <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
     <!-- Top Slider CSS -->
-    <link href="{{asset('public/frontend3')}}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+    <link href="{{asset('frontend3')}}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
 
     <!-- Main style sheet -->
-    <link href="{{asset('public/frontend3')}}/css/style.css" rel="stylesheet">    
+    <link href="{{asset('frontend3')}}/css/style.css" rel="stylesheet">    
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -48,7 +48,7 @@
              @foreach($sliders as $slider)
             <li>
               <div class="seq-model">
-                <img data-seq src="{{asset('public/upload/slider_images/'.$slider->image)}}" alt="Men slide img" />
+                <img data-seq src="{{asset('upload/slider_images/'.$slider->image)}}" alt="Men slide img" />
               </div>
             </li>
              @endforeach
@@ -67,30 +67,30 @@
   <br> <br><br><br> <br><br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="{{asset('public/frontend3')}}/js/bootstrap.js"></script>  
+  <script src="{{asset('frontend3')}}/js/bootstrap.js"></script>  
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.js"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.smartmenus.bootstrap.js"></script>  
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.bootstrap.js"></script>  
   <!-- To Slider JS -->
-  <script src="{{asset('public/frontend3')}}/js/sequence.js"></script>
-  <script src="{{asset('public/frontend3')}}/js/sequence-theme.modern-slide-in.js"></script>  
+  <script src="{{asset('frontend3')}}/js/sequence.js"></script>
+  <script src="{{asset('frontend3')}}/js/sequence-theme.modern-slide-in.js"></script>  
   <!-- Product view slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleLens.js"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/slick.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/slick.js"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/nouislider.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/nouislider.js"></script>
   <!-- Custom js -->
-  <script src="{{asset('public/frontend3')}}/js/custom.js"></script>
+  <script src="{{asset('frontend3')}}/js/custom.js"></script>
 
   <!-- Slider --
   <section class="section-slide">
     <div class="wrap-slick1">
       <div class="slick1">
         @foreach($sliders as $slider)
-        <div class="item-slick1" style="background-image: url({{asset('public/upload/slider_images/'.$slider->image)}});">
+        <div class="item-slick1" style="background-image: url({{asset('upload/slider_images/'.$slider->image)}});">
           <div class="container h-full">
             <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
               <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">

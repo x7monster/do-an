@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Product Lists
 		</h2>
@@ -43,7 +43,7 @@
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
-							<img src="{{url('public/upload/product_images/'.$product->image)}}" alt="IMG-PRODUCT" style="height: 350px; width: 255px">
+							<img src="{{url('upload/product_images/'.$product->image)}}" alt="IMG-PRODUCT" style="height: 350px; width: 255px">
 
 							<a href="{{route('products.details.info',$product->slug)}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								Add to Card

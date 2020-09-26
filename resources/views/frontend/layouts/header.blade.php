@@ -23,7 +23,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="{{url('')}}" class="logo">
-						<img src="{{url('public/upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO">
+						<img src="{{url('upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -96,7 +96,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="{{url('')}}"><img src="{{url('public/upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO"></a>
+				<a href="{{url('')}}"><img src="{{url('upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -204,7 +204,7 @@
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="{{asset('public/frontend')}}/images/icons/icon-close2.png" alt="CLOSE">
+					<img src="{{asset('frontend')}}/images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
 				<form class="wrap-search-header flex-w p-l-15">
@@ -240,7 +240,7 @@
 				@foreach($contents as $content)
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
-							<img src="{{asset('public/upload/product_images/'.$content->options->image)}}" alt="IMG">
+							<img src="{{asset('upload/product_images/'.$content->options->image)}}" alt="IMG">
 						</div>
 
 						<div class="header-cart-item-txt p-t-8">

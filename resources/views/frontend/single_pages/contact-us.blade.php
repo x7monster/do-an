@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center" style="font-family:helvetica; font-weight: bold">
 			Liên Hệ
 		</h2>
@@ -23,24 +23,24 @@
 						@csrf
                         <div class="bor8 m-b-20 how-pos4-parent">
                             <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" placeholder="Tên Đầy Đủ" value="" required="">
-                            <img class="how-pos4 pointer-none" src="{{asset('public/frontend')}}/images/icons/user.png" alt="ICON">
+                            <img class="how-pos4 pointer-none" src="{{asset('frontend')}}/images/icons/user.png" alt="ICON">
                             <font color="red"><b></b></font>
                         </div>
 
                         <div class="bor8 m-b-20 how-pos4-parent">
                             <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" name="email" placeholder="Địa Chỉ Email" value="" required="">
-                            <img class="how-pos4 pointer-none" src="{{asset('public/frontend')}}/images/icons/icon-email.png" alt="ICON">
+                            <img class="how-pos4 pointer-none" src="{{asset('frontend')}}/images/icons/icon-email.png" alt="ICON">
                             <font color="red"><b></b></font>
                         </div>
 
                         <div class="bor8 m-b-20 how-pos4-parent">
                             <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="number" name="mobile_no" placeholder="Số điện thoại" value="" required="">
-                            <img class="how-pos4 pointer-none" src="{{asset('public/frontend')}}/images/icons/mobile.png" alt="ICON">
+                            <img class="how-pos4 pointer-none" src="{{asset('frontend')}}/images/icons/mobile.png" alt="ICON">
                             <font color="red"><b></b></font>
                         </div>
                         <div class="bor8 m-b-20 how-pos4-parent">
                             <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="address" placeholder="Địa chỉ" value="" required="">
-                            <img class="how-pos4 pointer-none" src="{{asset('public/frontend')}}/images/icons/user.png" alt="ICON">
+                            <img class="how-pos4 pointer-none" src="{{asset('frontend')}}/images/icons/user.png" alt="ICON">
                             <font color="red"><b></b></font>
                         </div>
 

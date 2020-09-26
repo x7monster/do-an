@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Product Details
 		</h2>
@@ -18,11 +18,11 @@
 
 							<div class="slick3 gallery-lb">
 								@foreach($product_sub_images as $img)
-								<div class="item-slick3" data-thumb="{{url('public/upload/product_images/product_sub_images/'.$img->sub_image)}}">
+								<div class="item-slick3" data-thumb="{{url('upload/product_images/product_sub_images/'.$img->sub_image)}}">
 									<div class="wrap-pic-w pos-relative">
-										<img src="{{url('public/upload/product_images/product_sub_images/'.$img->sub_image)}}" alt="IMG-PRODUCT">
+										<img src="{{url('upload/product_images/product_sub_images/'.$img->sub_image)}}" alt="IMG-PRODUCT">
 
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{url('public/upload/product_images/product_sub_images/'.$img->sub_image)}}">
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{url('upload/product_images/product_sub_images/'.$img->sub_image)}}">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>

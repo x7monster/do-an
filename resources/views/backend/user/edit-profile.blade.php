@@ -70,7 +70,7 @@
                            <input type="file" name="image" class="form-control" id="image">
                         </div>
                         <div class="form-group col-md-2">
-                          <img id="showImage" src="{{(!empty($editData->image))?url('public/upload/user_images/'.$editData->image):url('public/upload/no_img.png')}}" style="width: 150px; height:160px; border: 1px solid #000; ">
+                          <img id="showImage" src="{{(!empty($editData->image))?url('upload/user_images/'.$editData->image):url('public/upload/no_img.png')}}" style="width: 150px; height:160px; border: 1px solid #000; ">
                         </div> 
                         <div class="form-group col-md-6" style="padding-top: 30px">
                           <input type="submit" value="Update" class="btn btn-primary">

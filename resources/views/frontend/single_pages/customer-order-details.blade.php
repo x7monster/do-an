@@ -15,7 +15,7 @@
 		padding: 10px
 	}
 </style>
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Chi Tiết Đơn Hàng
 		</h2>
@@ -33,7 +33,7 @@
 					<table class="txt-center mytable" width="100%" border="1">
 						<tr>
 							<td width="30%">
-								<img src="{{url('public/upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO" width="200px">
+								<img src="{{url('upload/logo_images/'.$logo->image)}}" alt="IMG-LOGO" width="200px">
 							</td>
 							<td width="40%">
 								<h3><strong>BH SHOP 2020</strong></h3>
@@ -70,7 +70,7 @@
 						@foreach($order['order_details'] as $details)
 						<tr>
 							<td>
-								<img src="{{url('public/upload/product_images/'.$details['product']['image'])}}" style="width: 50px; height:55px;"> &nbsp; {{$details['product']['name']}}
+								<img src="{{url('upload/product_images/'.$details['product']['image'])}}" style="width: 50px; height:55px;"> &nbsp; {{$details['product']['name']}}
 							</td>
 							<td>
 								{{$details['color']['name']}} & {{$details['size']['name']}}

@@ -63,7 +63,7 @@
                 		<tr>
                 			<td width="50%">Hình Ảnh</td>
                 			<td width="50%">
-                				<img src="{{(!empty($product->image))?url('public/upload/product_images/'.$product->image):url('public/upload/no_img.png')}}" style="width: 90px; height:95px;">
+                				<img src="{{(!empty($product->image))?url('upload/product_images/'.$product->image):url('upload/no_img.png')}}" style="width: 90px; height:95px;">
                 			</td>
                 		<tr>
                 			<td width="50%">Màu </td>
@@ -94,7 +94,7 @@
                 					$sub_images = App\Model\ProductSubImage::where('product_id',$product->id)->get();
                 				@endphp
                 				@foreach($sub_images as $img)
-                					<img src="{{url('public/upload/product_images/product_sub_images/'.$img->sub_image)}}" style="width: 90px; height:95px;">	
+                					<img src="{{url('upload/product_images/product_sub_images/'.$img->sub_image)}}" style="width: 90px; height:95px;">	
                 				@endforeach
                 			</td>
                 		</tr>

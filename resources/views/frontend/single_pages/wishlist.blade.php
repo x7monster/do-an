@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center" style="font-family:helvetica; font-weight: bold">
 			Liên Hệ
 		</h2>
@@ -35,7 +35,7 @@
                		<tbody>
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="{{url('public/upload/product_images/'.$product->image)}}" alt="img"></a></td>
+                        <td><a href="#"><img src="{{url('upload/product_images/'.$product->image)}}" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">{{$product->name}}</a></td>
                         <td>{{number_format($product->price)}} VND</td>
                         <td>In Stock</td>

@@ -8,25 +8,25 @@
     <title>Daily Shop | Home</title>
     
     <!-- Font awesome -->
-    <link href="{{asset('public/frontend3')}}/css/font-awesome.css" rel="stylesheet">
+    <link href="{{asset('frontend3')}}/css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="{{asset('public/frontend3')}}/css/bootstrap.css" rel="stylesheet">   
+    <link href="{{asset('frontend3')}}/css/bootstrap.css" rel="stylesheet">   
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
-    <link href="{{asset('public/frontend3')}}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link href="{{asset('frontend3')}}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
     <!-- Product view slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/jquery.simpleLens.css">    
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/jquery.simpleLens.css">    
     <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/slick.css">
     <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/frontend3')}}/css/nouislider.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/nouislider.css">
     <!-- Theme color -->
-    <link id="switcher" href="{{asset('public/frontend3')}}/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="{{asset('frontend3')}}/css/theme-color/default-theme.css" rel="stylesheet">
     <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
     <!-- Top Slider CSS -->
-    <link href="{{asset('public/frontend3')}}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+    <link href="{{asset('frontend3')}}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
 
     <!-- Main style sheet -->
-    <link href="{{asset('public/frontend3')}}/css/style.css" rel="stylesheet">    
+    <link href="{{asset('frontend3')}}/css/style.css" rel="stylesheet">    
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -42,7 +42,7 @@
   
 
   </head>
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('public/frontend/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center" style="font-family:helvetica; font-weight: bold">
 			Thương Hiệu
 		</h2>
@@ -59,7 +59,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="{{route('products.details.info',$product->slug)}}"><img src="{{url('public/upload/product_images/'.$product->image)}}" alt="polo shirt img" style="height: 300px; width: 255px"></a>
+                    <a class="aa-product-img" href="{{route('products.details.info',$product->slug)}}"><img src="{{url('upload/product_images/'.$product->image)}}" alt="polo shirt img" style="height: 300px; width: 255px"></a>
                     <a class="aa-add-card-btn"href="{{route('products.details.info',$product->slug)}}"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
@@ -92,7 +92,7 @@
                               <div class="simpleLens-container">
                                   <div class="simpleLens-big-image-container">
                                       <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
-                                          <img src="{{asset('public/frontend3')}}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                          <img src="{{asset('frontend3')}}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
                                       </a>
                                   </div>
                               </div>
@@ -147,7 +147,7 @@
                 <ul>
                 	@foreach($products2 as $product)
                   <li>
-                    <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('public/upload/product_images/'.$product->image)}}"></a>
+                    <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('upload/product_images/'.$product->image)}}"></a>
                     <div class="aa-cartbox-info">
                       <h4><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
                       <p>{{number_format($product->price)}} VND</p>
@@ -164,7 +164,7 @@
                 <ul>
                 	@foreach($products3 as $product)
                   <li>
-                    <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('public/upload/product_images/'.$product->image)}}"></a>
+                    <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('upload/product_images/'.$product->image)}}"></a>
                     <div class="aa-cartbox-info">
                       <h4><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
                       <p>{{number_format($product->price)}} VND</p>
@@ -182,21 +182,21 @@
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="{{asset('public/frontend3')}}/js/bootstrap.js"></script>  
+  <script src="{{asset('frontend3')}}/js/bootstrap.js"></script>  
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.js"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.smartmenus.bootstrap.js"></script>  
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.bootstrap.js"></script>  
   <!-- To Slider JS -->
-  <script src="{{asset('public/frontend3')}}/js/sequence.js"></script>
-  <script src="{{asset('public/frontend3')}}/js/sequence-theme.modern-slide-in.js"></script>  
+  <script src="{{asset('frontend3')}}/js/sequence.js"></script>
+  <script src="{{asset('frontend3')}}/js/sequence-theme.modern-slide-in.js"></script>  
   <!-- Product view slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleLens.js"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/slick.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/slick.js"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="{{asset('public/frontend3')}}/js/nouislider.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/nouislider.js"></script>
   <!-- Custom js -->
-  <script src="{{asset('public/frontend3')}}/js/custom.js"></script> 
+  <script src="{{asset('frontend3')}}/js/custom.js"></script> 
 @endsection
