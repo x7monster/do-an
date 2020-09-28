@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <!-- jQuery -->
+  <script src="{{asset('js/app.js')}}"></script>
+
 <script src="{{asset('backend')}}/plugins/jquery/jquery.min.js"></script>
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -47,7 +49,7 @@
 <link href="{{asset('backend')}}/plugins/select2/css/select2.min.css" rel="stylesheet">
 <link href="{{asset('backend')}}/plugins/select2.bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed" id="app">
 <div class="wrapper">
 
   <!-- Navbar -->

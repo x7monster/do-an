@@ -31,7 +31,7 @@ class FrontendController extends Controller
         $data['brands'] = Product::select('brand_id')->groupBy('brand_id')->get();
         $data['products'] = Product::orderBy('id','desc')->paginate(12);
         $data['products2'] = Product::where('brand_id','=',1)->limit(8)->get();
-    	return view('frontend.layouts.home',$data);
+        return view('frontend.layouts.home',$data);
     }
 
     public function productList(){
