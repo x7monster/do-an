@@ -4,6 +4,7 @@
 <head>
 	<base href="{{asset('')}}">
 	<title>LBH Fashion</title>
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="{{asset('frontend/images/icons/favicon.png')}}"/>
@@ -21,15 +22,23 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend/css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+
+	<!-- Sweet alert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	
 
 	<script src="{{asset('js/app.js')}}"></script>
 	<script src="{{asset('frontend/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js')}}"></script>
 	<style type="text/css">
 		.notifyjs-corner{
-    z-index: 10000 !important;
-  }
+    		z-index: 10000 !important;
+  		}
 	</style>
+
+	<script src="{{asset('js/wishlist.js')}}"></script>
+
 </head>
 <body class="animsition" id="app">
 	@include('frontend.layouts.header')

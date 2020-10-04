@@ -4,18 +4,23 @@
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
 			<div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
+				<div class="container">
+					<div class="content-topbar">
 						<div class="left-top-bar">
-							<font size="3px" color="#fff" style="margin-left: -650px">
-		                        {{$contact->mobile_no}} &nbsp;&nbsp;&nbsp;
-		                        {{$contact->email}}
-		                    </font>
+							<font>
+								{{$contact->mobile_no}} &nbsp;&nbsp;&nbsp;
+								{{$contact->email}}
+							</font>
+						</div>
+						<div class="right-top-bar">
+							<a href="{{ route('wishlists.index') }}">
+								<span class="fa fa-heart-o"></span>
+								Danh sách yêu thích
+							</a>
 						</div>
 					</div>
-
-					
-				</div>
+				</div>	
+				
 			</div>
 
 			<div class="wrap-menu-desktop how-shadow1">
