@@ -29,6 +29,9 @@ Route::get('/product-details/{slug}','Frontend\FrontendController@productDetails
 Route::post('find-product','Frontend\FrontendController@findProduct')->name('find.product');
 Route::get('/get-product','Frontend\FrontendController@getProduct')->name('get.product');
 
+// Wish list
+Route::resource('/wishlists', 'Frontend\WishlistController')->except('create', 'show', 'update');
+
 //Shopping-Cart
 Route::post('/add-to-cart','Frontend\CartController@addtoCart')->name('insert.cart');
 Route::get('/show-cart','Frontend\CartController@showCart')->name('show.cart');
