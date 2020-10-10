@@ -1314,6 +1314,7 @@ img {
   white-space: nowrap;
   overflow: hidden;
   width:100%;
+  min-height: 20px;
 }
 .aa-product-catg  .aa-product-title a {
   color: #333;

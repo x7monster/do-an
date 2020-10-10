@@ -20,78 +20,84 @@
 			</div>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<h3 style="text-align: center">SẢN PHẨM MỚI</h3><br>
-			<div class="row isotope-grid">
-				@foreach($products as $product)
-				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-					<!-- Block2 -->
-					<div class="block2">
-						<div class="block2-pic hov-img0">
-							<img src="{{url('upload/product_images/'.$product->image)}}" alt="IMG-PRODUCT" style="height: 290px; width: 255px">
+      <div class="row mt-3 aa-product-catg">
+        @foreach($products as $product)
+          @include('frontend.single_pages.one-product', $product)
+        @endforeach
 
-							<a href="{{route('products.details.info',$product->slug)}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-								Đặt Hàng
-							</a>
-						</div>
-            
-
-
-						<div class="block2-txt flex-w flex-t p-t-14">
-							<div class="block2-txt-child1 flex-col-l ">
-								<a href="{{route('products.details.info',$product->slug)}}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									{{$product->name}}
-								</a>
-
-								<span class="stext-105 cl3">
-									
-									{{number_format($product->price)}} VND
-								</span>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				@endforeach
-			</div>
-			{{$products->links()}}
+        <div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">                      
+              <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="row">
+                  <!-- Modal view slider -->
+                  <div class="col-md-6 col-sm-6 col-xs-12">                              
+                    <div class="aa-product-view-slider">                                
+                      <div class="simpleLens-gallery-container" id="demo-1">
+                        <div class="simpleLens-container">
+                            <div class="simpleLens-big-image-container">
+                                <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
+                                    <img src="{{asset('frontend3')}}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                </a>
+                            </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal view content -->
+                  
+                </div>
+              </div>                        
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+      </div>
 			
 			<h3 style="text-align: center">THƯƠNG HIỆU NỔI TIẾNG</h3><br>
-			<div class="row isotope-grid">
-				@foreach($products2 as $product)
-				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-					<!-- Block2 -->
-					<div class="block2">
-						<div class="block2-pic hov-img0">
-							<img src="{{url('upload/product_images/'.$product->image)}}" alt="IMG-PRODUCT" style="height: 290px; width: 255px">
+			<div class="row mt-3 aa-product-catg">
+        @foreach($products2 as $product)
+          @include('frontend.single_pages.one-product', $product)
+        @endforeach
 
-							<a href="{{route('products.details.info',$product->slug)}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-								Đặt Hàng
-							</a>
-						</div>
+        <div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">                      
+              <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="row">
+                  <!-- Modal view slider -->
+                  <div class="col-md-6 col-sm-6 col-xs-12">                              
+                    <div class="aa-product-view-slider">                                
+                      <div class="simpleLens-gallery-container" id="demo-1">
+                        <div class="simpleLens-container">
+                            <div class="simpleLens-big-image-container">
+                                <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
+                                    <img src="{{asset('frontend3')}}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                </a>
+                            </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal view content -->
+                  
+                </div>
+              </div>                        
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
 
-						<div class="block2-txt flex-w flex-t p-t-14">
-							<div class="block2-txt-child1 flex-col-l ">
-								<a href="{{route('products.details.info',$product->slug)}}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									{{$product->name}}
-								</a>
-
-								<span class="stext-105 cl3">
-									
-									{{number_format($product->price)}} VND
-								</span>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				@endforeach
-			</div>
+        <div class="aa-product-catg-pagination">
+          <nav>
+          </nav>
+        </div>
+      </div>
 			
 		</div>
 	</section>
-
-
 
 
 	<head>
@@ -124,14 +130,6 @@
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   
 
   </head>
