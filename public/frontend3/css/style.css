@@ -1102,6 +1102,15 @@ img {
 .aa-product-catg {
   margin-left: -54px;
 }
+
+#aa-product-category {
+  margin-top: 2rem;
+}
+
+#aa-product-category .aa-product-catg {
+  margin-left: 0;
+}
+
 .aa-product-catg li {
   display: block;
   float: left;
@@ -1248,7 +1257,7 @@ img {
   overflow: hidden;
   height: 380px;
   text-align: center;
-  margin-bottom: .8rem;
+  margin-bottom: 1.2rem;
 }
 
 .aa-product-catg .one-product:hover figure .aa-product-img {

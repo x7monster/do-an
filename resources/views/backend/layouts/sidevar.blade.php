@@ -3,12 +3,12 @@
   $route = Route::current()->getName();
 @endphp
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-2 sidebar-menu">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           @if(Auth::user()->role=='Admin')
           <li class="nav-item has-treeview {{($prefix=='/users')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-user-friends"></i>
               <p>
                 Người Dùng
                 <i class="fas fa-angle-left right"></i>
@@ -27,7 +27,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/profiles')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-id-card"></i>
               <p>
                 Quản Lý Cá Nhân
                 <i class="fas fa-angle-left right"></i>
@@ -50,7 +50,7 @@
         </li>
         <li class="nav-item has-treeview {{($prefix=='/logos')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-cogs"></i>
               <p>
                 Logo
                 <i class="fas fa-angle-left right"></i>
@@ -68,7 +68,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/sliders')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-images"></i>
               <p>
                 Slider
                 <i class="fas fa-angle-left right"></i>
@@ -86,7 +86,7 @@
           
           <li class="nav-item has-treeview {{($prefix=='/contacts')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-address-book"></i>
               <p>
                 Liên Hệ
                 <i class="fas fa-angle-left right"></i>
@@ -110,7 +110,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/abouts')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="far fa-file-alt"></i>
               <p>
                 Thông Tin
                 <i class="fas fa-angle-left right"></i>
@@ -128,7 +128,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/news')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="far fa-newspaper"></i>
               <p>
                 Tin Tức
                 <i class="fas fa-angle-left right"></i>
@@ -146,7 +146,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/categories')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-atlas"></i>
               <p>
                 Loại Sản Phẩm
                 <i class="fas fa-angle-left right"></i>
@@ -164,7 +164,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/brands')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="far fa-copyright"></i>
               <p>
                 Nhãn Hiệu
                 <i class="fas fa-angle-left right"></i>
@@ -182,7 +182,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/colors')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-palette"></i>
               <p>
                 Quản Lý Màu
                 <i class="fas fa-angle-left right"></i>
@@ -200,7 +200,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/sizes')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-sitemap"></i>
               <p>
                 Kích Thước
                 <i class="fas fa-angle-left right"></i>
@@ -218,7 +218,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/sponsors')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-crown"></i>
               <p>
                 Nhà Tài Trợ
                 <i class="fas fa-angle-left right"></i>
@@ -236,7 +236,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/products')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fab fa-product-hunt"></i>
               <p>
                 Sản Phẩm
                 <i class="fas fa-angle-left right"></i>
@@ -254,7 +254,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/customers')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-user-tag"></i>
               <p>
                 Khách Hàng
                 <i class="fas fa-angle-left right"></i>
@@ -278,7 +278,7 @@
 
           <li class="nav-item has-treeview {{($prefix=='/orders')?'menu-open':''}}">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="fas fa-shopping-cart"></i>
               <p>
                 Đặt Hàng
                 <i class="fas fa-angle-left right"></i>

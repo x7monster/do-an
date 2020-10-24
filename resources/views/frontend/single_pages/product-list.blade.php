@@ -1,73 +1,181 @@
 @extends('frontend.layouts.master')
 @section('content')
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">
-			Product Lists
-		</h2>
-	</section>
-<section class="bg0 p-t-23 p-b-140">
-		<div class="container">
-			<div class="flex-w flex-sb-m p-b-52">
-				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 
-					<a class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" href="{{route('products.list')}}">All Products</a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Daily Shop | Home</title>
+    
+    <!-- Font awesome -->
+    <link href="{{asset('frontend3')}}/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{{asset('frontend3')}}/css/bootstrap.css" rel="stylesheet">   
+    <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+    <link href="{{asset('frontend3')}}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <!-- Product view slider -->
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/jquery.simpleLens.css">    
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend3')}}/css/nouislider.css">
+    <!-- Theme color -->
+    <link id="switcher" href="{{asset('frontend3')}}/css/theme-color/default-theme.css" rel="stylesheet">
+    <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
+    <!-- Top Slider CSS -->
+    <link href="{{asset('frontend3')}}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
 
-					@foreach($categories as $category)
-					<a class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" href="{{route('category.wise.product',$category->category_id)}}">{{$category['category']['name']}}</a>
-					@endforeach
-				</div>
-				@include('frontend.layouts.search')
-				<!-- Filter -->
-				<div class="dis-none panel-filter w-full">
-					<div class="wrap-filter flex-w w-full" style="background-color: #858585;">
-				        <div>
-				            <div style="padding: 20px; font-size: 25px; color: #fff">
-				                Brands
-				            </div>
-				            <div style="padding: 0px 20px 20px 20px;">
-				            	@foreach($brands as $brand)
-				                <a class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" href="{{route('brand.wise.product',$brand->brand_id)}}" class="filter-link stext-106 trans-04" style="color: #fff">
-				                    {{$brand['brand']['name']}}
-				                </a>
-				                @endforeach
+    <!-- Main style sheet -->
+    <link href="{{asset('frontend3')}}/css/style.css" rel="stylesheet">    
 
-				            </div>
-				        </div>
-				    </div>
-				</div>
-			</div>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    
 
-			<div class="row isotope-grid">
-				@foreach($products as $product)
-				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-					<!-- Block2 -->
-					<div class="block2">
-						<div class="block2-pic hov-img0">
-							<img src="{{url('upload/product_images/'.$product->image)}}" alt="IMG-PRODUCT" style="height: 350px; width: 255px">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
 
-							<a href="{{route('products.details.info',$product->slug)}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-								Add to Card
-							</a>
-						</div>
+  </head>
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
+	<h2 class="ltext-105 cl0 txt-center" style="font-family:helvetica; font-weight: bold">
+		San Pham
+	</h2>
+</section>
 
-						<div class="block2-txt flex-w flex-t p-t-14">
-							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									{{$product->name}}
-								</a>
+<section id="aa-product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <aside class="aa-sidebar">
+              <!-- single sidebar -->
+              <div class="aa-sidebar-widget">
+                <h3>Category</h3>
+                <ul class="aa-catg-nav">
+                  @foreach($categories as $category)
+                  <li><a href="{{route('category.wise.product',$category->category_id)}}">{{$category['category']['name']}}</a></li>
+                  @endforeach
+                </ul>
+              </div>
+              <!-- single sidebar -->
+              <div class="aa-sidebar-widget">
+                <h3>Brands</h3>
+                <div class="tag-cloud">
+                  @foreach($brands as $brand)
+                  <a href="{{route('brand.wise.product',$brand->brand_id)}}"> {{$brand['brand']['name']}}</a>
+                  @endforeach
+                </div>
+              </div>
+              <!-- single sidebar -->
+            
+              <!-- single sidebar -->
+              
+              <!-- single sidebar -->
+              <div class="aa-sidebar-widget">
+                <h3>Recently Views</h3>
+                <div class="aa-recently-views">
+                  <ul>
+                    @foreach($products2 as $product)
+                    <li>
+                      <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('upload/product_images/'.$product->image)}}"></a>
+                      <div class="aa-cartbox-info">
+                        <h4><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
+                        <p>{{number_format($product->price)}} VND</p>
+                      </div>                    
+                    </li>
+                      @endforeach                      
+                  </ul>
+                </div>                            
+              </div>
+              <!-- single sidebar -->
+              <div class="aa-sidebar-widget">
+                <h3>Top Rated Products</h3>
+                <div class="aa-recently-views">
+                  <ul>
+                    @foreach($products3 as $product)
+                    <li>
+                      <a href="{{route('products.details.info',$product->slug)}}" class="aa-cartbox-img"><img alt="img" src="{{url('upload/product_images/'.$product->image)}}"></a>
+                      <div class="aa-cartbox-info">
+                        <h4><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
+                        <p>{{number_format($product->price)}} VND</p>
+                      </div>                    
+                    </li>    
+                    @endforeach                         
+                  </ul>
+                </div>                            
+              </div>
+            </aside>
+          </div>
+        <div class="col-12 col-md-9">
+          <div class="row mt-3 aa-product-catg">
+              @foreach($products as $product)
+                <div class="col-6 col-md-4 one-product">
+                  <figure>
+                    <a class="aa-product-img" href="{{route('products.details.info',$product->slug)}}">
+                    <img src="{{url('upload/product_images/'.$product->image)}}" alt="polo shirt img" style="height: 300px; width: 100%">
+                    </a>
+                    <a class="aa-add-card-btn"href="{{route('products.details.info',$product->slug)}}"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                    <figcaption>
+                    <h4 class="aa-product-title"><a href="{{route('products.details.info',$product->slug)}}">{{$product->name}}</a></h4>
+                    @if($product->sale)
+                      <span class="text-muted">
+                      <s>{{number_format($product->price)}} VND</s>
+                      </span>
+                      <span class="aa-product-price">{{ calcPrice($product->price, $product->sale) }} VND</span>
+                    @else
+                      <span class="aa-product-price">{{number_format($product->price)}} VND</span>
+                    @endif
+                    </figcaption>
+                    @if($product->sale)
+                    <span class="aa-badge aa-sale" href="#">SALE!</span>
+                    @endif
+                  </figure>
 
-								<span class="stext-105 cl3">
-									{{$product->price}} VND
-								</span>
-							</div>
+                  <div class="aa-product-hvr-content">
+                    <a href="" class="add-wish-list" data-toggle="tooltip" data-placement="top" title="Add to Wishlist" 
+                    data-id="{{ $product->id }}">
+                    <span class="fa fa-heart-o"></span>
+                    </a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                    <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>                            
+                  </div>
+                    <!-- product badge -->
+                </div>
+              @endforeach
+          </div>
+          <div class="aa-product-catg-pagination">
+            <nav>
+              {{$products->links()}}
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 
-						</div>
-					</div>
-				</div>
 
-				@endforeach
-			</div>
-			{{$products->links()}}
-		</div>
-	</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{{asset('frontend3')}}/js/bootstrap.js"></script>  
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.js"></script>
+  <!-- SmartMenus jQuery Bootstrap Addon -->
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.smartmenus.bootstrap.js"></script>  
+  <!-- To Slider JS -->
+  <script src="{{asset('frontend3')}}/js/sequence.js"></script>
+  <script src="{{asset('frontend3')}}/js/sequence-theme.modern-slide-in.js"></script>  
+  <!-- Product view slider -->
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/jquery.simpleLens.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="{{asset('frontend3')}}/js/nouislider.js"></script>
+  <!-- Custom js -->
+  <script src="{{asset('frontend3')}}/js/custom.js"></script> 
 @endsection

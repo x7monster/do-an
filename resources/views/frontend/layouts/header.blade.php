@@ -34,54 +34,57 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-	                        <li class="active-menu">
+	                        <li class="{{ Request::is('/') ? 'active-menu' : '' }}">
 	                            <a href="{{url('')}}" style="font-family:helvetica; font-weight: bold">TRANG CHỦ</a>
 	                        </li>
-	                        <li>
-	                            <a href="" style="font-family:helvetica; font-weight: bold" >CỬA HÀNG</a>
-			                            <ul class="sub-menu">
-			                            	@foreach($categories as $category)
-			                                <li><a href="{{route('category.wise.product',$category->category_id)}}" style="font-family:helvetica;">{{$category['category']['name']}}</a></li>
-			                                @endforeach
-			                            </ul>
+	                        <li @if (Request::route()->getName() == 'products.list' || 
+								Request::route()->getName() == 'category.wise.product') class={{ "active-menu" }} @endif>
+	                            <a href="{{ route('products.list') }}" style="font-family:helvetica; font-weight: bold" >CỬA HÀNG</a>
+									<ul class="sub-menu">
+										@foreach($categories as $category)
+										<li><a href="{{route('category.wise.product',$category->category_id)}}" style="font-family:helvetica;">{{$category['category']['name']}}</a></li>
+										@endforeach
+									</ul>
 	                        </li>
-	                        <li>
+	                        <li @if (Request::route()->getName() == 'brand.wise.product') class={{ "active-menu" }} @endif>
 	                            <a href="" style="font-family:helvetica; font-weight: bold" >NHÃN HIỆU</a>
-			                            <ul class="sub-menu">
-			                            	@foreach($brands as $brand)
-			                                <li><a href="{{route('brand.wise.product',$brand->brand_id)}}" style="font-family:helvetica;">{{$brand['brand']['name']}}</a></li>
-			                                @endforeach
-			                            </ul>
+									<ul class="sub-menu">
+										@foreach($brands as $brand)
+										<li><a href="{{route('brand.wise.product',$brand->brand_id)}}" style="font-family:helvetica;">{{$brand['brand']['name']}}</a></li>
+										@endforeach
+									</ul>
 	                        </li>
-	                        <li>
+	                        <li class="{{ Request::is('news-us') ? 'active-menu' : '' }}">
 	                            <a href="{{route('news.us')}}" style="font-family:helvetica; font-weight: bold">TIN TỨC</a>
 	                        </li>
-	                        <li>
+	                        <li class="{{ Request::is('about-us') ? 'active-menu' : '' }}">
 	                            <a href="{{route('about.us')}}" style="font-family:helvetica; font-weight: bold">THÔNG TIN</a>
 	                        </li>
-	                        <li>
+	                        <li class="{{ Request::is('contact-us') ? 'active-menu' : '' }}">
 	                            <a href="{{route('contact.us')}}" style="font-family:helvetica; font-weight: bold">LIÊN HỆ</a>
 	                        </li>
 	                       
-	                        @if(@Auth::user()->id !=NULL)
-	                        <li class="active-menu">
-	                            <a href="#" style="font-family:helvetica; font-weight: bold">TÀI KHOẢN</a>
-	                            <ul class="sub-menu">
-	                                <li><a href="{{route('dashboard')}}" style="font-family:helvetica;">Tổng quan</a></li>
-	                                <li><a href="{{route('customer.password.change')}}" style="font-family:helvetica;">Đổi mật khẩu</a></li>
-	                                <li><a href="{{route('customer.order.list')}}" style="font-family:helvetica;">Đơn đặt hàng</a></li>
-	                                <li><a href="{{ route('logout') }}"
-					                 onclick="event.preventDefault();
-					                 document.getElementById('logout-form').submit();">Thoát ra
-					             	</a>
-					             	 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  					 @csrf
-                  					</form>
-					            		 </li>
-	                            </ul>
-	                        </li>  
+	                        @if(Auth::user())
+								<li>
+									<a href="#" style="font-family:helvetica; font-weight: bold">TÀI KHOẢN</a>
+									<ul class="sub-menu">
+										<li><a href="{{route('dashboard')}}" style="font-family:helvetica;">Tổng quan</a></li>
+										<li><a href="{{route('customer.password.change')}}" style="font-family:helvetica;">Đổi mật khẩu</a></li>
+										<li><a href="{{route('customer.order.list')}}" style="font-family:helvetica;">Đơn đặt hàng</a></li>
+										<li><a href="{{ route('logout') }}"
+										onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">Thoát ra
+										</a>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+										</form>
+											</li>
+									</ul>
+								</li>  
 	                        @else
-	                        <li><a href="{{route('customer.login')}}" style="font-family:helvetica; font-weight: bold">ĐĂNG NHẬP</a></li>
+	                        	<li class="{{ Request::is('customer-login') || Request::is('customer-signup') ? 'active-menu' : '' }}">
+									<a href="{{route('customer.login')}}" style="font-family:helvetica; font-weight: bold">ĐĂNG NHẬP</a>
+								</li>
 	                        @endif
 	                    </ul>
 					</div>	
@@ -148,7 +151,7 @@
 	                            <a href="{{url('')}}" style="font-family:helvetica; font-weight: bold">TRANG CHỦ</a>
 	                        </li>
 	                        <li>
-	                            <a href="" style="font-family:helvetica; font-weight: bold" >CỬA HÀNG</a>
+	                            <a href="{{ route('products.list') }}" style="font-family:helvetica; font-weight: bold" >CỬA HÀNG</a>
 			                            <ul class="sub-menu">
 			                            	@foreach($categories as $category)
 			                                <li><a href="{{route('category.wise.product',$category->category_id)}}" style="font-family:helvetica;">{{$category['category']['name']}}</a></li>

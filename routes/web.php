@@ -11,40 +11,44 @@
 |
 */
 
-Route::get('/','Frontend\FrontendController@index');
-Route::get('about-us','Frontend\FrontendController@aboutUs')->name('about.us');
-Route::get('news-us','Frontend\FrontendController@newsUs')->name('news.us');
-Route::get('/news/details/{id}','Frontend\FrontendController@newsDetails')->name('news.details');
-Route::get('contact-us','Frontend\FrontendController@contactUs')->name('contact.us');
-Route::post('/contact/store','Frontend\FrontendController@store')->name('contact.store');
+Route::group(['namespace' => 'Frontend'], function() {
+	Route::get('/','FrontendController@index');
+	Route::get('about-us','FrontendController@aboutUs')->name('about.us');
+	Route::get('news-us','FrontendController@newsUs')->name('news.us');
+	Route::get('/news/details/{id}','FrontendController@newsDetails')->name('news.details');
+	Route::get('contact-us','FrontendController@contactUs')->name('contact.us');
+	Route::post('/contact/store','FrontendController@store')->name('contact.store');
+
+	Route::get('/shopping/cart','FrontendController@shoppingCart')->name('shopping.cart');
+	Route::get('products','FrontendController@productList')->name('products.list');
+	Route::get('/product-category/{category_id}','FrontendController@categoryWiseProduct')->name('category.wise.product');
+	Route::get('/product-brand/{brand_id}','FrontendController@brandWiseProduct')->name('brand.wise.product');
+	Route::get('/product-details/{slug}','FrontendController@productDetails')->name('products.details.info');
+	Route::post('find-product','FrontendController@findProduct')->name('find.product');
+	Route::get('/get-product','FrontendController@getProduct')->name('get.product');
+
+	// Wish list
+	Route::resource('/wishlists', 'WishlistController')->except('create', 'show', 'update');
+
+	//Shopping-Cart
+	Route::post('/add-to-cart','CartController@addtoCart')->name('insert.cart');
+	Route::get('/show-cart','CartController@showCart')->name('show.cart');
+	Route::post('/update-cart','CartController@updateCart')->name('update.cart');
+	Route::get('/delete-cart/{rowId}','CartController@deleteCart')->name('delete.cart');
+
+	Route::get('/customer-login','CheckoutController@customerLogin')->name('customer.login');
+	Route::get('/customer-signup','CheckoutController@customerSignup')->name('customer.signup');
+	Route::post('/signup-store','CheckoutController@signupStore')->name('signup.store');
+	Route::get('/email-verify','CheckoutController@emailVerify')->name('email.verify');
+	Route::post('/verify-store','CheckoutController@verifyStore')->name('verify.store');
+	Route::get('checkout','CheckoutController@checkOut')->name('customer.checkout');
+	Route::post('checkout/store','CheckoutController@checkoutStore')->name('customer.checkout.store');
+});
+
+
 Route::get('/communicate','Backend\ContactController@viewCommunicate')->name('contacts.communicate');
 Route::get('/communicate/delete/{id}','Backend\ContactController@deleteCommunicate')->name('contacts.communicate.delete');
 
-
-Route::get('/shopping/cart','Frontend\FrontendController@shoppingCart')->name('shopping.cart');
-Route::get('product-list','Frontend\FrontendController@productList')->name('products.list');
-Route::get('/product-category/{category_id}','Frontend\FrontendController@categoryWiseProduct')->name('category.wise.product');
-Route::get('/product-brand/{brand_id}','Frontend\FrontendController@brandWiseProduct')->name('brand.wise.product');
-Route::get('/product-details/{slug}','Frontend\FrontendController@productDetails')->name('products.details.info');
-Route::post('find-product','Frontend\FrontendController@findProduct')->name('find.product');
-Route::get('/get-product','Frontend\FrontendController@getProduct')->name('get.product');
-
-// Wish list
-Route::resource('/wishlists', 'Frontend\WishlistController')->except('create', 'show', 'update');
-
-//Shopping-Cart
-Route::post('/add-to-cart','Frontend\CartController@addtoCart')->name('insert.cart');
-Route::get('/show-cart','Frontend\CartController@showCart')->name('show.cart');
-Route::post('/update-cart','Frontend\CartController@updateCart')->name('update.cart');
-Route::get('/delete-cart/{rowId}','Frontend\CartController@deleteCart')->name('delete.cart');
-
-Route::get('/customer-login','Frontend\CheckoutController@customerLogin')->name('customer.login');
-Route::get('/customer-signup','Frontend\CheckoutController@customerSignup')->name('customer.signup');
-Route::post('/signup-store','Frontend\CheckoutController@signupStore')->name('signup.store');
-Route::get('/email-verify','Frontend\CheckoutController@emailVerify')->name('email.verify');
-Route::post('/verify-store','Frontend\CheckoutController@verifyStore')->name('verify.store');
-Route::get('checkout','Frontend\CheckoutController@checkOut')->name('customer.checkout');
-Route::post('checkout/store','Frontend\CheckoutController@checkoutStore')->name('customer.checkout.store');
 
 Auth::routes();
 //customer-dashboard

@@ -38,10 +38,12 @@ class FrontendController extends Controller
         $data['logo'] = Logo::first();
         $data['contact'] = Contact::first();
         $data['news'] = News::first();
-        $data['products'] = Product::orderBy('id','desc')->paginate(4);
+        $data['products'] = Product::orderBy('id','desc')->paginate(9);
+        $data['products2'] = Product::where('brand_id','=',1)->limit(8)->get();
+        $data['products3'] = Product::where('brand_id','=',8)->limit(3)->get();
         $data['categories'] = Product::select('category_id')->groupBy('category_id')->get();
         $data['brands'] = Product::select('brand_id')->groupBy('brand_id')->get();
-        return view('frontend.single_pages.product-list',$data);
+        return view('frontend.single_pages.product-list', $data);
     }
 
     public function categoryWiseProduct($category_id){
