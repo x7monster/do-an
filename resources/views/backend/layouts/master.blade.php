@@ -43,6 +43,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css">
+
+<!-- ckeditor5 -->
+<script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+
 <!-- Sweet alert -->
 <script src="{{asset('backend')}}/sweetalert/sweetalert.js"></script>
 <link href="{{asset('backend')}}/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
@@ -212,6 +216,8 @@
 <script src="{{asset('backend')}}/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="{{asset('backend')}}/plugins/jquery-validation/additional-methods.min.js"></script>
 <script src="{{asset('backend')}}/plugins/select2/js/select2.full.min.js"></script>
+
+<script src="{{asset('backend')}}/js/ckeditor5.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({

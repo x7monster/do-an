@@ -951,7 +951,6 @@ header {
 
 .main-menu {
   background: #fff;
-  padding: 10px 20px;
   position: relative;
 }
 
@@ -2774,10 +2773,6 @@ body {
 
 .single-post-wrap .feature-img-thumb img {
   width: 100%;
-}
-
-.single-post-wrap .feature-img-thumb .overlay-bg {
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .single-post-wrap .content-wrap {

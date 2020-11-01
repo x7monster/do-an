@@ -65,30 +65,31 @@
 										<li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$news->created_at}}</a></li>
 										
 									</ul>
-									<p>{{$news->content}}</p>
+									<div>
+										<?php echo($news->content) ?>
+									</div>
+									
 									
 								<div class="comment-sec-area">
-									<div class="container">
-										<div class="row flex-column">
+									<div class="row flex-column">
+										<div id="fb-root"></div>
+										<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0" nonce="iHthrjVY"></script>
+										<div class="fb-comments" data-href="{{route('news.details',$news->id)}}" data-numposts="10" data-width=""></div>
 											<div id="fb-root"></div>
-											<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0" nonce="iHthrjVY"></script>
-											<div class="fb-comments" data-href="{{route('news.details',$news->id)}}" data-numposts="10" data-width=""></div>
-											 <div id="fb-root"></div>
-											  <script async defer crossorigin="anonymous" 
-											        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
-											             &version={graph-api-version}
-											             &appId={your-facebook-app-id}
-											             &autoLogAppEvents=1" 
-											        nonce="FOKrbAYI">
-											  </script>
-											  <div class="fb-like" 
-       data-href="{{route('news.details',$news->id)}}" 
-       data-width=""
-       data-layout="standard" 
-       data-action="like" 
-       data-size="small"  
-       data-share="true">
-  </div>
+											<script async defer crossorigin="anonymous" 
+												src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
+														&version={graph-api-version}
+														&appId={your-facebook-app-id}
+														&autoLogAppEvents=1" 
+												nonce="FOKrbAYI">
+											</script>
+											<div class="fb-like" 
+											data-href="{{route('news.details',$news->id)}}" 
+											data-width=""
+											data-layout="standard" 
+											data-action="like" 
+											data-size="small"  
+											data-share="true">
 										</div>
 									</div>
 								</div>

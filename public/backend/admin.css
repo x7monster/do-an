@@ -2,3 +2,7 @@
   width: 25px;
 }
 
+#cke_1_contents {
+  min-height: 500px !important;
+}
+
