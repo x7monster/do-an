@@ -12,7 +12,7 @@
 */
 
 Route::group(['namespace' => 'Frontend'], function() {
-	Route::get('/','FrontendController@index');
+	Route::get('/','FrontendController@index')->name('index');
 	Route::get('about-us','FrontendController@aboutUs')->name('about.us');
 	Route::get('news-us','FrontendController@newsUs')->name('news.us');
 	Route::get('/news/details/{id}','FrontendController@newsDetails')->name('news.details');
@@ -45,6 +45,8 @@ Route::group(['namespace' => 'Frontend'], function() {
 	Route::post('checkout/store','CheckoutController@checkoutStore')->name('customer.checkout.store');
 });
 
+Route::get('auth/redirect/{provider}', 'Auth\LoginSocialite@redirect')->name('authSocial_redirect');
+Route::get('auth/callback/{provider}', 'Auth\LoginSocialite@callback');
 
 Route::get('/communicate','Backend\ContactController@viewCommunicate')->name('contacts.communicate');
 Route::get('/communicate/delete/{id}','Backend\ContactController@deleteCommunicate')->name('contacts.communicate.delete');

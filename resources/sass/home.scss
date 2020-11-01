@@ -28,5 +28,13 @@
             margin-left: 10px;
         }
     }
-    
 }   
+
+select.form-control:not([size]):not([multiple]) {
+    height: auto;
+}
+
+.prof {
+    min-width: 200px;
+    margin-bottom: 20px;
+}

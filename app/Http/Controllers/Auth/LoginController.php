@@ -11,6 +11,8 @@ use App\User;
 
 class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+
    public function login(Request $request){
         $this->validate($request,[
             'email' => 'required',
@@ -22,16 +24,15 @@ class LoginController extends Controller
         $validData = User::where('email',$email)->first();
         $password_check = password_verify($password, @$validData->password);
         if($password_check == false){
-            return redirect()->back()->with('message','Email or Password does not match');
+            return redirect()->back()->with('message','Email hoặc mật khẩu không chính xác');
         }
         if($validData->status == '0'){
-            return redirect()->back()->with('message','Sorry! you are not verified yet');
+            return redirect()->back()->with('message','Xin lỗi, bạn chưa được xác nhận');
         }
         if(Auth::attempt(['email'=>$email,'password'=>$password])){
             return redirect()->route('login');
         }
    }
-    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.

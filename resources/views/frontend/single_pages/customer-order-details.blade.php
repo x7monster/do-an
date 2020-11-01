@@ -22,14 +22,14 @@
 	</section>
 		<div class="container">
 			<div class="row" style="padding: 15px 0px 15px 0px;">
-				<div class="col-md-2">
+				<div class="col-md-3">
 					<ul class="prof">
 						<li><a href="{{route('dashboard')}}">Thông Tin</a></li>
 						<li><a href="{{route('customer.password.change')}}">Đổi Mật Khẩu</a></li>
 						<li><a href="{{route('customer.order.list')}}">Đơn Đặt Hàng</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-9">
 					<table class="txt-center mytable" width="100%" border="1">
 						<tr>
 							<td width="30%">

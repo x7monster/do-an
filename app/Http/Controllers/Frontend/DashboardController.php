@@ -48,18 +48,17 @@ class DashboardController extends Controller
     }
 
     public function updateProfile(Request $request){
-    	$user = User::find(Auth::user()->id);
+        $user = User::find(Auth::user()->id);
+        
     	$this->validate($request,[
-            'name' => 'required',
-            'email' => 'required|unique:users,email,'.$user->id,
-            'mobile' => ['required','unique:users,mobile,'.$user->id]
-
+            'name' => 'required'
         ]);
+
         $user->name = $request->name;
-        $user->email = $request->email;
         $user->mobile = $request->mobile;
         $user->address = $request->address;
         $user->gender = $request->gender;
+
         if ($request->file('image')){
     		$file = $request->file('image');
     		@unlink(public_path('upload/user_images/'.$user->image));
@@ -68,7 +67,7 @@ class DashboardController extends Controller
     		$user['image']= $filename;
     	}
     	$user->save();
-    	return redirect()->route('dashboard')->with('success','Profile update successfullly');
+    	return redirect()->route('dashboard')->with('success','Cập nhật thông tin thành công');
     }
 
     public function passwordChange(){

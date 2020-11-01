@@ -13,27 +13,27 @@
 </style>
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('frontend/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
-			My Orders
+			Đơn đặt hàng của tôi
 		</h2>
 	</section>
 		<div class="container">
 			<div class="row" style="padding: 15px 0px 15px 0px;">
-				<div class="col-md-2">
+				<div class="col-md-3">
 					<ul class="prof">
-						<li><a href="{{route('dashboard')}}">My Profile</a></li>
-						<li><a href="{{route('customer.password.change')}}">PW Change</a></li>
-						<li><a href="{{route('customer.order.list')}}">My Orders</a></li>
+						<li><a href="{{route('dashboard')}}">Thông tin</a></li>
+						<li><a href="{{route('customer.password.change')}}">Thay đổi mật khẩu</a></li>
+						<li><a href="{{route('customer.order.list')}}">Đơn đặt hàng</a></li>
 					</ul>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-9">
 					<table class="table table-bordered">
 						<thead>
 							<tr>
-								<th>Order No</th>
-								<th>Total Amount</th>
-								<th>Payment Type</th>
-								<th>Status</th>
-								<th>Action</th>
+								<th>Mã đơn hàng</th>
+								<th>Tổng tiền</th>
+								<th>Loại</th>
+								<th>Trạng thái</th>
+								<th>Hành động</th>
 							</tr>
 						</thead>
 						<tbody>

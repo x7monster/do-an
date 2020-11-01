@@ -18,12 +18,19 @@
 		</h2>
 	</section>
 		<div class="container">
+			@if (session('success'))
+				<div class="alert alert-success mt-3">
+					{{ session('success') }}
+				</div>
+			@endif
+
+
 			<div class="row" style="padding: 15px 0px 15px 0px;">
 				<div class="col-md-2">
 					<ul class="prof">
 						<li><a href="{{route('dashboard')}}">Thông Tin</a></li>
-						<li><a href="{{route('customer.password.change')}}">PW Change</a></li>
-						<li><a href="{{route('customer.order.list')}}">Đơn Đặt Hàng</a></li>
+						<li><a href="{{route('customer.password.change')}}">Thay đổi mật khẩu</a></li>
+						<li><a href="{{route('customer.order.list')}}">Đơn đặt hàng</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10">
@@ -49,7 +56,7 @@
 											</tr>
 											<tr>
 												<td>Giới Tính</td>
-												<td>{{$user->gender}}</td>
+												<td>{{ $user->gender == 'Male' ? 'Nam' : 'Nữ' }}</td>
 											</tr>
 										</tbody>
 									</table>

@@ -3,9 +3,7 @@
 <style type="text/css">
 #login .container #login-row #login-column #login-box {
   max-width: 600px;
-  height: 320px;
   border: 1px solid #9C9C9C;
-  background-color: #EAEAEA;
   margin-bottom: 100px;
   margin-top: 40px;
 }
@@ -52,8 +50,12 @@
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
+                                <input type="submit" name="submit" class="btn btn-info btn-md mr-3" value="Login">
                                 <i class="fa fa-user"></i> Bạn chưa có tài khoản !! <a href="{{route('customer.signup')}}"><span>Đăng ký mới tại đây!!</span></a>
+                            </div>
+
+                            <div class="form-group">
+                                <a class="btn btn-danger btn-block btn-lg" href="{{ route('authSocial_redirect', ['provider' => 'google']) }}">Đăng nhập bằng Google</a>
                             </div>
                         </form>
                     </div>
